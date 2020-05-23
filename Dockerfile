@@ -1,7 +1,7 @@
-FROM centos:7
+FROM rubyapps/centos-devtools:7
 LABEL MAINTAINER "jaron@rubensteintech.com"
 
-# update to latest packages and install CentOS Development tools
+# update to latest packages and install CentOS Development tools for Perl and Perl RPM module creation
 RUN yum -y update && \
     yum -y groupinstall 'Development tools' && \
     yum -y install which openssh-clients && \
